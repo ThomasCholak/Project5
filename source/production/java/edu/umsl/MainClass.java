@@ -1,46 +1,56 @@
+/*
+Thomas Cholak
+Professor Steve Riegerix
+CMP SCI 2261
+10 April 2022
+
+Assignment: Write a program which classifies plants, animals and fungi using an interface, abstract class, and a set/list of elements.
+ */
+
+
 package edu.umsl;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class MainClass {
-    public static void main (String args[]) {
+    public static void main (String[] args) {
         //Animal
-        Animal monkey = new Monkey();
-        Animal goat = new Goat();
+        Monkey monkey = new Monkey();
+        Goat goat = new Goat();
         //Plant
-        Plant tree = new Tree();
-        Plant seaweed = new Seaweed();
+        Tree tree = new Tree();
+        Seaweed seaweed = new Seaweed();
         //Fungi
-        Fungi chanterelle = new Chanterelle();
-        Fungi morel = new Morel();
+        Chanterelle chanterelle = new Chanterelle();
+        Morel morel = new Morel();
 
         //Animal List
-        List<String> animalList = new ArrayList<String>();
+        List<String> animalList = new ArrayList<>();
         animalList.add(monkey.eatFood());
         animalList.add(monkey.modeOfReproduction());
-        animalList.add(((Monkey) monkey).infoString());
+        animalList.add(monkey.infoString());
         animalList.add(goat.eatFood());
         animalList.add(goat.modeOfReproduction());
-        animalList.add(((Goat) goat).infoString());
-        System.out.println("Animal List: " + animalList.toString());
+        animalList.add(goat.infoString());
+        System.out.println("Animal List: " + animalList);
         //Plant List
-        List<String> plantList = new ArrayList<String>();
+        List<String> plantList = new ArrayList<>();
         plantList.add(tree.eatFood());
         plantList.add(tree.modeOfReproduction());
-        plantList.add(((Tree) tree).infoString());
+        plantList.add(tree.infoString());
         plantList.add(seaweed.eatFood());
         plantList.add(seaweed.modeOfReproduction());
-        plantList.add(((Seaweed) seaweed).infoString());
-        System.out.println("Plant List: " + plantList.toString());
+        plantList.add(seaweed.infoString());
+        System.out.println("Plant List: " + plantList);
         //Fungi List
-        List<String> fungiList = new ArrayList<String>();
+        List<String> fungiList = new ArrayList<>();
         fungiList.add(chanterelle.eatFood());
         fungiList.add(chanterelle.modeOfReproduction());
-        fungiList.add(((Chanterelle) chanterelle).infoString());
+        fungiList.add(chanterelle.infoString());
         fungiList.add(morel.eatFood());
         fungiList.add(morel.modeOfReproduction());
-        fungiList.add(((Morel) morel).infoString());
-        System.out.println("Fungi List: " + fungiList.toString());
+        fungiList.add(morel.infoString());
+        System.out.println("Fungi List: " + fungiList);
     }
 }
